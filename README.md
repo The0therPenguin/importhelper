@@ -1,5 +1,11 @@
 # importify
 
+## Requirements/Imports
+- os
+- threading
+- traceback
+- subprocess
+
 ## Installation
 Hopefully...
 ```
@@ -8,7 +14,7 @@ pip install importify
 ... should work.
 
 ## Use
-Has a class named **Mod(modules,src,package)** which can almost directly translate to a 'pip' package and the imports to be made from said 'pip' package.
+Has a class named _**Mod(modules,src,package)**_ which can almost directly translate to a pip package and the imports/installs to be made from said pip package. Custom urls for packages are not supported. (Only uses official packages from PyPI)
 
 You can import the class by:
 ```
@@ -52,6 +58,6 @@ Eg: _**Mod.SILENCE_UNINSTALL_ERRORS=True**_ # Silence error messages when using 
 They are all _False_ by default (No silencing)
 
 ## Purpose
-This project was built solely for the purpose of providing a way to automate package installations and imports when sending over .py files that require certain imports but they aren't installed.
+This project was built solely for the purpose of providing a way to automate package installations and imports when sending over .py files that require certain imports but they aren't installed i.e., _**import requests**_ throws an error because you don't have it installed.
 It also helps when you have incompatibilities and need ways to workaround by uninstalling, installing and uninstalling certain packages in certain orders.
 (Bad and incompatible package creators.... You are the reason for this *eyes intensely*)
