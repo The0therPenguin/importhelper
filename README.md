@@ -39,16 +39,16 @@ flaskMod.isInstalled()
 
 requestsMod
 ```
-*The _Mod_ class has a static variable called PIP_FREEZE(Basically saves the information of all *currently* installed packages). Thus, calling multiple Mod.install() or Mod.uninstall()'s is not recommended because PIP_FREEZE might be corrupted/have bad data.
-PIP_FREEZE is only refreshed when loading of the importify module and on install/uninstall of a _Mod_ package
+* The _**Mod**_ class has a static variable called PIP_FREEZE(Basically saves the information of all *currently* installed packages). Thus, calling multiple Mod.install() or Mod.uninstall()'s is not recommended because PIP_FREEZE might be corrupted/have bad data.
+PIP_FREEZE is only refreshed when loading of the importify module and on install/uninstall of a _**Mod**_ package.
 
 #### Other features
 - You can manually refresh PIP_FREEZE by *Mod.refreshPipFreezeInfo()*
-- *Mod.getPipFreeze()* returns a list of _ModVersion_s that you can use to determine which packages are installed of which version. You can compare said _ModVersion_ objects with each other. Just check the methods honestly.
+- _**Mod.getPipFreeze()**_ returns a list of _**ModVersion**_ s that you can use to determine which packages are installed of which version. You can compare said _**ModVersion**_ objects with each other. Just check the methods honestly.
 
 #### Disabling print messages for import, install, uninstall
-The **Mod** class has around 9 static "silencing" boolean variables which, upon enabling, will stop printing their respective msgz.
-Eg: **Mod.SILENCE_UNINSTALL_ERRORS=True** # Silence error messages when using **Mod.uninstall()**
+The _**Mod**_ class has around 9 static "silencing" boolean variables which, upon enabling, will stop printing their respective msgz.
+Eg: _**Mod.SILENCE_UNINSTALL_ERRORS=True**_ # Silence error messages when using _**Mod.uninstall()**_
 They are all _False_ by default (No silencing)
 
 ## Purpose
