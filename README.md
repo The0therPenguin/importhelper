@@ -1,4 +1,4 @@
-# importify
+# importhelper
 
 ## Requirements/Imports
 - os
@@ -9,7 +9,7 @@
 ## Installation
 Hopefully...
 ```
-pip install importify
+pip install importhelper
 ```
 ... should work.
 
