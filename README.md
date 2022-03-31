@@ -1,4 +1,4 @@
-#importify
+# importify
 
 ## Installation
 Hopefully
@@ -19,11 +19,15 @@ from importify import Mod
 Eg:
 ```
 flaskMod=Mod(modules="jsonify,Flask as flsk",src="flask",package="Flask")
+
+flaskMod.attemptImport() # Imports "Flask" from the "flask" module as "flsk" (Literal execution is "from flask import Flask as flsk" and also "jsonify" from the "flask" module (Literal execution is "from flask import jsonify") if it is installed[^1].
+
+flaskMod.install() # Installs package "Flask" if it is not installed[^1].
+
+flaskMod.uninstall() # Uninstalls package "Flask" if it is installed[^1].
+
+flaskMod.isInstalled() # Returns boolean value 'True' if the package is installed[^1].
 ```
-flaskMod.attemptImport() - Imports "Flask" from the "flask" module as "flsk" (Literal execution is "from flask import Flask as flsk" and also "jsonify" from the "flask" module (Literal execution is "from flask import jsonify") if it is installed[^1].
-flaskMod.install() - Installs package "Flask" if it is not installed[^1].
-flaskMod.uninstall() - Uninstalls package "Flask" if it is installed[^1].
-flaskMod.isInstalled() - Returns boolean value 'True' if the package is installed[^1].
 
 [^1]: The class has a static variable called PIP_FREEZE(Basically saves the information of all *currently* installed packages). Thus, calling multiple Mod.install() or Mod.uninstall()'s is not recommended because PIP_FREEZE might be corrupted/have bad data.
 PIP_FREEZE is only refreshed when loading of the importify module and on install/uninstall of a _Mod_ package
