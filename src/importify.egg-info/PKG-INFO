@@ -1,3 +1,20 @@
+Metadata-Version: 2.1
+Name: importify
+Version: 0.0.1
+Summary: Lets you import stuff ezier
+Home-page: https://github.com/pypa/sampleproject
+Author: The0therPenguin
+Author-email: ykwfhp@gmail.com
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/pypa/sampleproject/issues
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.4
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
 #importify
 
 ## Installation
@@ -38,3 +55,4 @@ They are all 'False' by default (No silencing)
 
 ## Purpose
 This project was built solely for the purpose of providing a way to automate package installations and imports when sending over files that require certain imports but dont have them. It also helps when you have incompatibilities and need ways to workaround by uninstalling,installing and uninstalling certain packages in certain orders. (Bad, incompatible package makers.... You are the reason for this)
+
